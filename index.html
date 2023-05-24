@@ -13,11 +13,9 @@
 		<nav class="menu">
 		  <a href="#" class="menu-logo-link"><img src="svg/noemi-logo.svg" class="menu-logo" alt="noemi">
 		  </a>
-		  <div class="menu-burger">
-			<div class="burger"></div>
-			<div class="burger"></div>
-			<div class="burger"></div>
-		  </div>
+		  <button class="menu-burger">
+			<span class="burger"></span>
+		  </button>
 		  <ul class="menu-list">
 			<li class="menu-item">
 			  <a href="#" class="menu-link">Главная</a>
@@ -44,6 +42,34 @@
 		</h1>
 	  </div>
 </header>
+
+<div class="popup-container">
+  <div class="popup">
+    <h2 class="feedback-title">ваш фидбек</h2>
+    <form action="feedback">
+      <label for="popupSelect" class="popup-common-title">Как часто вы заходите на сайт?</label>
+      <select name="select" class="select" id="popupSelect" required>
+        <option value="value-basic">Почти каждый день</option>
+        <option value="value-one">Раз в несколько дней</option>
+        <option value="value-two">Раз в несколько недель</option>
+        <option value="value-three">Несколько раз в год</option>
+      </select>
+      <div class="radio-wrapper">
+        <label class="popup-common-title">Вы подписаны на e-mail рассылку?</label>
+        <input class="radio" type="radio" name="confirm" value="yes" id="yes" required>
+        <label class="radio-label" for="yes">Да</label>
+        <input class="radio" type="radio" name="confirm" value="no" id="no" required>
+        <label class="radio-label" for="no">Нет</label>
+      </div>
+      <div class="area=wrapper">
+        <label for="text-area" class="popup-common-title">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+        <textarea class="text-area" name="text-area" id="text-area" placeholder="Может, больше рецептов?"></textarea>
+      </div>
+      <button type="submit" class="popup-button">Отправить</button>
+    </form>
+    <button type="button" id="closePopup" class="close-popup"></button>
+  </div>
+</div>
 
 <aside class="trends">
   <h2 class="title">Сейчас в тренде</h2>
@@ -346,7 +372,8 @@
 				srcset="images/shop-item-mobile1.jpg">
 			<img
 				src="images/shop-item-desk1.jpg"
-				alt="подушки на диван">
+				alt="подушки на диван"
+				class="product-picture">
 		</picture>
         <!--<img src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk1.jpg" class="product-image" alt="подушки на диван">-->
 		
@@ -380,7 +407,8 @@
 				srcset="images/shop-item-mobile2.jpg">
 			<img
 				src="images/shop-item-desk2.jpg"
-				alt="подушки на диван">
+				alt="кукла зайчик"
+				class="product-picture">
 		</picture>
         <!--<img src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk2.jpg" class="product-image" alt="кукла зайчик">-->
         <div class="product-info">
@@ -412,7 +440,8 @@
 				srcset="images/shop-item-mobile3.jpg">
 			<img
 				src="images/shop-item-desk3.jpg"
-				alt="подушки на диван">
+				alt="шестиугольная рамка"
+				class="product-picture">
 		</picture>
         <!--<img src="https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/shop-item-desk3.jpg" class="product-image" alt="шестиугольная рамка">-->
         <div class="product-info">
